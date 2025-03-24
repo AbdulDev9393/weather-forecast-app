@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <meta name="description" content="Check the weather anywhere in the world" />
+    <link rel="stylesheet" href="style.css">
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1>Weather App</h1>
+        <p>Check the weather anywhere in the world</p>
+      </header>
+
+      <main>
+        <div class="search-container">
+          <input 
+            type="text" 
+            id="city-input" 
+            placeholder="Enter city name" 
+          />
+          <button id="search-btn">Search</button>
+        </div>
+
+        <div id="error-container" class="hidden">
+          <p id="error-message"></p>
+        </div>
+
+        <div id="weather-container" class="hidden">
+          <div class="weather-card">
+            <div class="weather-header">
+              <div>
+                <h2 id="location"></h2>
+                <p id="date"></p>
+              </div>
+              <div class="temperature-container">
+                <div id="temperature"></div>
+                <p id="weather-description"></p>
+              </div>
+            </div>
+
+            <div class="weather-details">
+              <div class="detail-item">
+                <p class="detail-title">Feels Like</p>
+                <p id="feels-like" class="detail-value"></p>
+              </div>
+              <div class="detail-item">
+                <p class="detail-title">Humidity</p>
+                <p id="humidity" class="detail-value"></p>
+              </div>
+              <div class="detail-item">
+                <p class="detail-title">Wind</p>
+                <p id="wind" class="detail-value"></p>
+              </div>
+              <div class="detail-item">
+                <p class="detail-title">Pressure</p>
+                <p id="pressure" class="detail-value"></p>
+              </div>
+            </div>
+
+            <div class="weather-icon">
+              <img id="weather-icon" alt="Weather icon" />
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer>
+        <p>Data provided by OpenWeatherMap</p>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
